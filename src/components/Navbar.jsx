@@ -1,6 +1,6 @@
-import './App.css';
+import CartWidget from "./CartWidget";
 
-function App() {
+const Navbar = () => {
   return (
     <nav>
       <header>
@@ -26,8 +26,9 @@ function App() {
           <a>CONTACTO</a>
         </li>
       </ul>
+      < CartWidget />
     </nav>
   );
 }
 
-export default App;
+export default Navbar;

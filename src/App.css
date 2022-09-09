@@ -1,9 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
 
-* {
-  margin: 0;
-  padding: 0;
-}
+/* Estilo de Navbar */
 
 nav {
   display: flex;
@@ -33,4 +30,24 @@ li {
 
 li:hover {
   color: rgb(74, 56, 22);
+}
+
+/* Estilo del Main */
+
+main {
+  display: flex;
+  justify-content: center;
+}
+
+main div {
+  padding: 30px;
+  margin: 20px;
+  background-color: rgb(195, 154, 78);
+  font-family: 'Montserrat', sans-serif;
+  border-radius: 1rem;
+}
+
+p {
+  font-style: italic;
+  font-size: 1rem;
 }
