@@ -36,18 +36,44 @@ li:hover {
 
 main {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
-main div {
+.titulos {
   padding: 30px;
-  margin: 20px;
-  background-color: rgb(195, 154, 78);
+  font-size: 1rem;
   font-family: 'Montserrat', sans-serif;
-  border-radius: 1rem;
 }
 
 p {
-  font-style: italic;
-  font-size: 1rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.boton {
+  margin: 20px;
+  background-color: rgb(195, 154, 78);
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.controles {
+  display: inline-block;
+}
+
+button {
+  padding: 15px;
+  margin: 10px;
+  background-color: rgb(129, 101, 49);
+  color: black;
+}
+
+button:hover {
+  background-color: rgb(137, 130, 116);
+}
+
+span {
+  padding: 1rem;
 }

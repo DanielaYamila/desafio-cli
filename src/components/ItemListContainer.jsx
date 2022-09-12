@@ -1,10 +1,11 @@
+import ItemCount from "./ItemCount";
+
 const ItemListContainer = (promp) => {
     return (
-        <div>
-            <img src="#" alt="" />
-            <h2>{promp.name}</h2>
-            <p>{promp.propiedad}</p>
-            <p>{promp.valor}</p>
+        <div className="titulos">
+            <h1>{promp.titulo}</h1>
+            <h2>{promp.subtitulo}</h2>
+            < ItemCount />
         </div>
     );
 }
