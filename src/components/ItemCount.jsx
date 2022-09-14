@@ -1,14 +1,18 @@
 import { useState } from "react";
 
 const ItemCount = () => {
-    const [rate, setRate] = useState(0);
+    const [rate, setRate] = useState(3);
 
     const restar = () => {
-        setRate(rate-1);
+        if (rate >= 1) {
+            setRate(rate-1);
+        }
     }
 
     const sumar = () => {
-        setRate(rate+1);
+        if (rate <= 7) {
+            setRate(rate+1);
+        }
     }
 
     return (
