@@ -1,6 +1,7 @@
 import './App.css';
 import Navbar from './components/Navbar';
-import ItemListContainer from './containers/ItemListContainer';
+/* import ItemListContainer from './containers/ItemListContainer'; */
+import ItemDetailContainer from './containers/ItemDetailContainer';
 
 const App = () => {
   return (
@@ -8,7 +9,7 @@ const App = () => {
       < Navbar />
       <main>
         {}
-        < ItemListContainer titulo="¡Bienvenido a VIBES ZONE!" subtitulo="CATALOGO DE PRODUCTOS"/>
+        < ItemDetailContainer />
       </main>
     </>
   );

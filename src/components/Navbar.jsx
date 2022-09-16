@@ -8,22 +8,22 @@ const Navbar = () => {
       </header>
       <ul>
         <li>
-          <a>INICIO</a>
+          <a href="#">INICIO</a>
         </li>
         <li>
-          <a>SAHUMERIOS</a>
+          <a href="#">SAHUMERIOS</a>
         </li>
         <li>
-          <a>FRAGANCIAS</a>
+          <a href="#">FRAGANCIAS</a>
         </li>
         <li>
-          <a>VELAS</a>
+          <a href="#">VELAS</a>
         </li>
         <li>
-          <a>PIEDRAS</a>
+          <a href="#">PIEDRAS</a>
         </li>
         <li>
-          <a>CONTACTO</a>
+          <a href="#">CONTACTO</a>
         </li>
       </ul>
       < CartWidget />

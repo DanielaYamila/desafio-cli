@@ -25,19 +25,22 @@ ul {
 li {
   padding-left: 10px;
   font-weight: bold;
+}
+
+a {
+  list-style: none;
+  text-decoration: none;
   color: saddlebrown;
 }
 
-li:hover {
+a:hover {
   color: rgb(74, 56, 22);
 }
-
 /* Estilo del Main */
 
 main {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: center;
 }
 
 .titulos {
@@ -46,8 +49,9 @@ main {
   font-family: 'Montserrat', sans-serif;
 }
 
-p {
+h3, p {
   font-family: 'Montserrat', sans-serif;
+  font-size: 1rem solid;
 }
 
 .boton {
@@ -78,14 +82,7 @@ span {
   padding: 1rem;
 }
 
-/* Cards */
-
-.containerCards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 15px;
-}
+/* Cards
 
 .cards {
   display: flex;
@@ -96,7 +93,26 @@ span {
   padding: 15px;
 }
 
-.cards img{
-  width: 300px;
-  height: 400px;
+*/
+
+.containerCards {
+  margin: 10px;
+}
+
+.cardIndividual {
+  background-color: white;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  padding: 30px;
+}
+
+.cardIndividual img{
+  width: 600px;
+  height: 600px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
 }
