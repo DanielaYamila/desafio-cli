@@ -1,17 +1,16 @@
 import { useState } from "react";
 
-const ItemCount = () => {
-    const [rate, setRate] = useState(1);
-    let stock = 7;
+const ItemCount = (promp) => {
+    const [rate, setRate] = useState(promp.initial);
 
     const restar = () => {
-        if (rate >= 1) {
+        if (rate >= promp.initial) {
             setRate(rate-1);
         }
     }
 
     const sumar = () => {
-        if (rate < stock) {
+        if (rate < promp.stock) {
             setRate(rate+1);
         }
     }
