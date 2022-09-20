@@ -10,8 +10,7 @@ const ItemDetail = ({item}) => {
                 <h3>{item.title}</h3>
                 <p> <strong>{item.description}</strong> </p>
                 <p> <strong>${item.price}</strong></p>
-                <button>Conocer más</button>
-                < ItemCount stock={7} initial={1} />
+                < ItemCount stock={item.stock} initial={1} />
             </div>
         </section>
     );

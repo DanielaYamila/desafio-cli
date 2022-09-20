@@ -1,17 +1,21 @@
 import { useEffect, useState } from "react";
 import getList from "../utils/getList";
-import ItemCount from "../components/ItemCount";
 import ItemList from "../components/ItemList";
+import { useParams } from 'react-router';
+const { info } = require('../utils/info');
 
 const ItemListContainer = (promp) => {
     const [arrayInfo, setData] = useState ([]);
+    const { idSection } = useParams();
 
     useEffect(() => {
-        getList()
-            .then((response) => setData(response))
-            .catch((err) => console.error(err))
-            .finally() 
-    }, []);
+        getList(2000, info.filter(item => {
+            if (idSection === undefined) return item;
+            return item.idSection === parseInt(idSection)
+        }))
+            .then(result => setData(result))
+            .catch(err => console.log(err))
+    }, [idSection]);
 
     return (
         <div className="titulos">
@@ -19,9 +23,6 @@ const ItemListContainer = (promp) => {
             <h2>{promp.subtitulo}</h2>
             <section className="containerCards">
                 < ItemList items={arrayInfo} />
-            </section>
-            <section>
-                < ItemCount />
             </section>
         </div>
     );

@@ -1,21 +1,21 @@
 import { useEffect, useState } from "react";
-import getItem from "../utils/getItem";
+import { useParams } from "react-router";
+import getList from "../utils/getList";
 import ItemDetail from "../components/ItemDetail";
+const { info } = require('../utils/info');
 
 const ItemDetailContainer = () => {
-    const [product, setData] = useState ({});
+    const [arrayInfo, setDato] = useState({});
+    const { idItem } = useParams();
 
     useEffect(() => {
-        getItem()
-            .then((response) => setData(response))
-            .catch((err) => console.error(err))
-            .finally() 
+        getList(2000, info.find(item => item.id === parseInt(idItem)))
+            .then(result => setDato(result))
+            .catch(err => console.log(err))
     }, []);
-
+    
     return (
-        <section className="containerCards">
-            < ItemDetail item={product} />
-        </section>
+        <ItemDetail item={arrayInfo} />
     );
 }
 

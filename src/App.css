@@ -107,9 +107,9 @@ span {
   padding: 30px;
 }
 
-.cardIndividual img{
-  width: 600px;
-  height: 600px;
+.containerCards  img{
+  width: 400px;
+  height: 500px;
 }
 
 .info {
