@@ -7,7 +7,7 @@ let Item = ({items}) => {
             <p>{items.title}</p>
             <p>{items.description}</p>
             <p>${items.price}</p>
-            <Link to={`/item/` + items.id}>Conocer más</Link>
+            <Link to={`/producto/` + items.id}>Conocer más</Link>
         </div>
     );
 }

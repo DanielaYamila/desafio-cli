@@ -1,24 +1,25 @@
 import { useState } from "react";
 
-const ItemCount = (promp) => {
-    const [rate, setRate] = useState(promp.initial);
+const ItemCount = ({stock, initial, onAdd}) => {
+    const [rate, setRate] = useState(initial);
 
     const restar = () => {
-        if (rate >= promp.initial) {
+        if (rate >= initial) {
             setRate(rate-1);
         }
     }
 
     const sumar = () => {
-        if (rate < promp.stock) {
+        if (rate < stock) {
             setRate(rate+1);
         }
     }
 
     const compra = () => {
         if(rate !== 0){
-            alert(`Se ha agregado al carrito ${rate} productos.`)
+            alert(`Se ha agregado al carrito ${rate} producto/s.`)
             setRate(rate);
+            onAdd(rate);
         }
     }
 
