@@ -15,14 +15,6 @@ const ItemCount = ({stock, initial, onAdd}) => {
         }
     }
 
-    const compra = () => {
-        if(rate !== 0){
-            alert(`Se ha agregado al carrito ${rate} producto/s.`)
-            setRate(rate);
-            onAdd(rate);
-        }
-    }
-
     return (
         <div className="boton">
             <p>Seleccionar unidad:</p>
@@ -31,7 +23,7 @@ const ItemCount = ({stock, initial, onAdd}) => {
                 <span> <strong>{rate}</strong> </span>
                 <button onClick={sumar}> <strong>+</strong> </button>
             </div>
-            <button onClick={compra}>Comprar</button>
+            <button onClick={() => onAdd(rate)}>Comprar</button>
         </div>
     );
 }

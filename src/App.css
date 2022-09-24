@@ -23,7 +23,7 @@ ul {
   display: flex;
 }
 
-li {
+ul li {
   padding-left: 10px;
   font-weight: bold;
 }
@@ -50,7 +50,7 @@ main {
   font-family: 'Montserrat', sans-serif;
 }
 
-h3, p {
+h2, h3, p {
   font-family: 'Montserrat', sans-serif;
   font-size: 1rem solid;
   color: black;
@@ -124,4 +124,36 @@ span {
 .info {
   display: flex;
   flex-direction: column;
+}
+
+/*Seccion carrito*/
+
+.contenedor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cardCompra {
+  display: flex;
+  margin: 10px;
+}
+
+.containerCarrito {
+  margin: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.cardCompra p {
+  font-family: 'Nunito', sans-serif;
+}
+
+.infoCompra {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background-color: white;
 }
