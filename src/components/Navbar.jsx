@@ -27,7 +27,9 @@ const Navbar = () => {
           <Link to='/seccion/contacto'>CONTACTO</Link>
         </li>
       </ul>
-      < CartWidget />
+      <div className="counterCompra">
+        <Link to='/carrito'> <CartWidget/> </Link>
+      </div>
     </nav>
   );
 }

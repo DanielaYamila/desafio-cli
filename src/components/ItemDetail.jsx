@@ -6,7 +6,7 @@ import { CartContext } from "./CartContext";
 
 const ItemDetail = ({item}) => {
     const [counter, setCounter] = useState(0);
-    const {addItem} = useContext(CartContext);
+    const {addItem, isInCart, removeItem} = useContext(CartContext);
 
     const onAdd = (quantity) => {
         alert("Producto añadido al carrito.");
@@ -24,9 +24,20 @@ const ItemDetail = ({item}) => {
                 <p> <strong>{item.description}</strong> </p>
                 <p> <strong>${item.price}</strong></p>
                 {
+                    isInCart(item.id)
+                    ? <div>
+                        <p>Chequee su producto en el carrito!</p>
+                        <button onClick={() => removeItem(item.id)}>Borrar producto del carrito</button>
+                    </div>
+                    :  <p>Pide nuestras ultimas unidades!</p>
+                }
+                {
                     counter === 0
                     ? < ItemCount stock={item.stock} initial={1} onAdd={onAdd} />
-                    : <Link to='/carrito' > <button>Ver productos</button> </Link>
+                    : <div>
+                        <Link to='/carrito' > <button>Terminar compra</button> </Link>
+                        <Link to={'/seccion/' + item.idSection} > <button>Volver a la seccion</button> </Link>
+                    </div>
                 }
             </div>
         </section>
