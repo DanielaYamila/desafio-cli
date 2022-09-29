@@ -1,18 +1,22 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";
-import getList from "../utils/getList";
+//import getList from "../utils/getList";
 import ItemDetail from "../components/ItemDetail";
-const { info } = require('../utils/info');
+import { doc, getDoc } from 'firebase/firestore';
+import { db } from '../utils/firebaseConfig';
 
 const ItemDetailContainer = () => {
     const [arrayInfo, setDato] = useState({});
-    const { idItem } = useParams();
+    const { id } = useParams();
 
     useEffect(() => {
-        getList(2000, info.find(item => item.id === parseInt(idItem)))
-            .then(result => setDato(result))
-            .catch(err => console.log(err))
-    }, []);
+        const docFetch = async () => {
+            const docRef = doc(db, "products", id);
+            const docSnap = await getDoc(docRef);
+            setDato(docSnap.data())
+        }
+        docFetch()
+    }, [id]);
     
     return (
         <ItemDetail item={arrayInfo} />

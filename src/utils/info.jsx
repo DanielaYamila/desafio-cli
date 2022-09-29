@@ -1,3 +1,5 @@
+import { isNode } from "@firebase/util";
+
 const info = [
     {
         id: 1,
@@ -109,6 +111,4 @@ const info = [
     }
 ];
 
-module.exports = {
-    info,
-};
+export default info;

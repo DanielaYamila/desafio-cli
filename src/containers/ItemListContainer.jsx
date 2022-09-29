@@ -1,21 +1,31 @@
 import { useEffect, useState } from "react";
-import getList from "../utils/getList";
+// import getList from "../utils/getList";
 import ItemList from "../components/ItemList";
 import { useParams } from 'react-router';
-const { info } = require('../utils/info');
+import { collection, getDocs, query, where } from "firebase/firestore";
+import { db } from '../utils/firebaseConfig';
 
 const ItemListContainer = (promp) => {
     const [arrayInfo, setData] = useState ([]);
-    const { idSection } = useParams();
+    const { id } = useParams();
 
     useEffect(() => {
-        getList(2000, info.filter(item => {
-            if (idSection === undefined) return item;
-            return item.idSection === parseInt(idSection)
-        }))
-            .then(result => setData(result))
-            .catch(err => console.log(err))
-    }, [idSection]);
+        const firestoreFetch = async () => {
+            let v
+            if (id) {
+                v = query(collection(db, "products"), where('idSection', '==', parseInt(id)))
+            } else {
+                v = query(collection(db, "products"))
+            }
+            const querySnapshot = await getDocs(v);
+            const firestoreData = querySnapshot.docs.map(document => ({
+                id: document.id,
+                ...document.data()
+            }))
+            return firestoreData
+        }
+        firestoreFetch()
+    }, [id]);
 
     return (
         <div className="titulos">

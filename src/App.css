@@ -113,8 +113,15 @@ span {
   border-radius: 1rem;
   display: flex;
   align-items: center;
+  justify-content: center;
   padding: 30px;
 }
+
+p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem solid;
+}
+
 
 .containerCards  img{
   width: 400px;
@@ -124,12 +131,19 @@ span {
 .info {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  margin: 20px;
 }
 
 /*Seccion carrito*/
 
-.counterCompra {
-  display: flex;
+.counterCompra span {
+  font-family: 'Nunito', sans-serif;
+  position: absolute;
+  right: 106px;
+  top: 15px;
+  border-radius: 4rem;
+  font-size: large;
 }
 
 .contenedor {
@@ -144,9 +158,14 @@ span {
 }
 
 .containerCarrito {
-  margin: 20px;
+  margin: 15px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.containerCarrito button {
+  margin-left: 90px;
 }
 
 .cardCompra p {

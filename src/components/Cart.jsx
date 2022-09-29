@@ -11,11 +11,11 @@ const Cart = () => {
             <div className="containerCarrito">
                 {
                     cartList == 0
-                    ?  <div>  
+                    ?  <div  className="containerCarrito">  
                         <h2> NO HAY PRODUCTOS EN EL CARRITO </h2> 
                         <Link to='/'> <button>Volver al INICIO</button></Link>
                       </div>
-                    : <div>
+                    : <div  className="containerCarrito">
                         <h2> Productos seleccionados: </h2>
                         <span>Total compra: ${totalPrice()}</span>
                         <button onClick={clear}>BORRAR TODO</button>
