@@ -1,25 +1,24 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";
-//import getList from "../utils/getList";
 import ItemDetail from "../components/ItemDetail";
 import { doc, getDoc } from 'firebase/firestore';
 import { db } from '../utils/firebaseConfig';
 
 const ItemDetailContainer = () => {
-    const [arrayInfo, setDato] = useState({});
-    const { id } = useParams();
+    const [arrayDetail, setDato] = useState({});
+    const { idItem } = useParams();
 
     useEffect(() => {
-        const docFetch = async () => {
-            const docRef = doc(db, "products", id);
-            const docSnap = await getDoc(docRef);
-            setDato(docSnap.data())
-        }
-        docFetch()
-    }, [id]);
+        const docRef = doc(db, "products", idItem);
+        getDoc(docRef)
+        .then(result => setDato({
+            id: result.id,
+            ...result.data()
+        }))
+    }, [idItem]);
     
     return (
-        <ItemDetail item={arrayInfo} />
+        <ItemDetail item={arrayDetail} />
     );
 }
 

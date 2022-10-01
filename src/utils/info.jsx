@@ -1,6 +1,4 @@
-import { isNode } from "@firebase/util";
-
-const info = [
+export const info = [
     {
         id: 1,
         idSection: 11,
