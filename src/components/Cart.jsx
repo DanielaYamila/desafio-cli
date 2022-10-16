@@ -42,7 +42,7 @@ const Cart = () => {
         <> 
             <div className="containerCarrito">
                 {
-                    cartList == 0
+                    cartList.length === 0
                     ?   <div  className="containerCarrito">  
                             <h2> NO HAY PRODUCTOS EN EL CARRITO </h2> 
                             <Link to='/'> <button>Volver al INICIO</button></Link>
