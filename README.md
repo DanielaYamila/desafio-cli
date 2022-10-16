@@ -26,7 +26,7 @@ En GitHub.com, vaya a la página principal del repositorio.
 4. Cambia el directorio de trabajo actual a la ubicación en donde quieres clonar el directorio. 
 5. Escriba git clone y pegue la dirección URL que ha copiado antes.
 $ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
-6. Presione **Entrar** para crear el clon local.
+7. Presione **Entrar** para crear el clon local.
 $ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
 > Cloning into `Spoon-Knife`...
 > remote: Counting objects: 10, done.
