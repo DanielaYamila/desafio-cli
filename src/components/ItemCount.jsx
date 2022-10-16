@@ -17,7 +17,6 @@ const ItemCount = ({stock, initial, onAdd}) => {
 
     return (
         <div className="boton">
-            <p>Seleccionar unidad:</p>
             <div className="controles">
                 <button onClick={restar}> <strong>-</strong> </button>
                 <span> <strong>{rate}</strong> </span>

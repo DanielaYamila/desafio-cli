@@ -5,9 +5,9 @@ const Navbar = () => {
   return (
     <nav>
       <header>
-        <a id="titulo">VIBES ZONE</a>
+        <Link to='/' className="titulo">VIBES ZONE</Link>
       </header>
-      <ul>
+      <ul className="listNavbar">
         <li>
           <Link to='/'>INICIO</Link>
         </li>
@@ -24,11 +24,11 @@ const Navbar = () => {
           <Link to='/seccion/44'>CUARZOS</Link>
         </li>
         <li>
-          <Link to='/seccion/contacto'>CONTACTO</Link>
+          <Link to='/contacto'>CONTACTO</Link>
         </li>
       </ul>
       <div className="counterCompra">
-        <Link to='/carrito'> <CartWidget/> </Link>
+        <Link className="carrito" to='/carrito'> <CartWidget/> </Link>
       </div>
     </nav>
   );

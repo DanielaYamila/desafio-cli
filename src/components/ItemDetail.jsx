@@ -29,7 +29,7 @@ const ItemDetail = ({item}) => {
                         <p>Chequee su producto en el carrito!</p>
                         <button onClick={() => removeItem(item.id)}>Borrar producto del carrito</button>
                     </div>
-                    :  <p>Pide nuestras ultimas unidades!</p>
+                    :  <p><strong>¡Solo quedan {item.stock} unidades!</strong></p>
                 }
                 {
                     counter === 0

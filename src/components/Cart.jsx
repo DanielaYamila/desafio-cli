@@ -40,20 +40,19 @@ const Cart = () => {
 
     return (
         <> 
-            
             <div className="containerCarrito">
                 {
                     cartList == 0
-                    ?  <div  className="containerCarrito">  
-                        <h2> NO HAY PRODUCTOS EN EL CARRITO </h2> 
-                        <Link to='/'> <button>Volver al INICIO</button></Link>
-                      </div>
-                    : <div  className="containerCarrito">
-                        <h2> Productos seleccionados: </h2>
-                        <span>Total compra: ${totalPrice()}</span>
-                        <button onClick={clear}>BORRAR TODO</button>
-                        <button onClick={createOrder}>COMPRAR TODO</button>
-                       </div>
+                    ?   <div  className="containerCarrito">  
+                            <h2> NO HAY PRODUCTOS EN EL CARRITO </h2> 
+                            <Link to='/'> <button>Volver al INICIO</button></Link>
+                        </div>
+                    :   <div  className="containerCarrito">
+                            <h2> Productos seleccionados: </h2>
+                            <button onClick={clear}>BORRAR TODO</button>
+                            <button onClick={createOrder}>COMPRAR TODO</button>
+                            <h2>Total compra: ${totalPrice()}</h2>
+                        </div>
                 }
             </div>
             <div className="contenedor">
@@ -63,7 +62,6 @@ const Cart = () => {
                             <img width="300px" height="400px" src={item.pictureUrl} alt={item.id} />
                             <div className="infoCompra">
                                 <p>{item.title}</p>
-                                <p>{item.description}</p>
                                 <p>${item.price}</p>
                                 <p>Ha elegido {item.quantity}.</p>
                                 <p>Subtotal: ${item.quantity * item.price}</p>
@@ -73,6 +71,23 @@ const Cart = () => {
                     )
                 }
             </div>
+            <section className="productos">
+                <h4>NUESTRA FORMA DE HACER LOS PRODUCTOS</h4>
+                <div className="productosInfo">
+                    <div>
+                        <p>CONTRA LAS PRUEBAS EN ANIMALES</p>
+                        <img src="https://img.icons8.com/ios/40/000000/dog-paw-print.png" alt="Icono amigable con los animales"/>
+                    </div>
+                    <div> 
+                        <p>FORMATOS NATURALES</p>
+                        <img src="https://img.icons8.com/external-basicons-line-edtgraphics/40/000000/external-circle-signs-basicons-line-edtgraphics.png" alt="Icono de formatos naturales"/>
+                    </div>
+                    <div>
+                        <p>CUIDADO DESDE EL ORIGEN</p>
+                        <img src="https://img.icons8.com/external-flatart-icons-outline-flatarticons/40/000000/external-care-sauna-flatart-icons-outline-flatarticons-3.png" alt="Icono de cuidado de productos"/>
+                    </div>
+                </div>
+            </section>
         </>
     )
 }

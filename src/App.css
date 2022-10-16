@@ -7,15 +7,15 @@ nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: burlywood;
+  background-color: #b79987;
   padding: 15px;
-  font-family: 'Montserrat', sans-serif;
 }
 
-#titulo {
+.titulo {
   font-size: 2rem;
   font-style: italic;
   color: aliceblue;
+  padding-right: 20px;
 }
 
 ul {
@@ -24,126 +24,35 @@ ul {
 }
 
 ul li {
-  padding-left: 10px;
   font-weight: bold;
 }
 
-a {
+li a {
+  padding: 0 8px 13px;
   list-style: none;
   text-decoration: none;
   color: saddlebrown;
 }
 
-a:hover {
-  color: rgb(74, 56, 22);
-}
-/* Estilo del Main */
-
-main {
-  display: flex;
-  justify-content: center;
-}
-
-.titulos {
-  padding: 30px;
-  font-size: 1rem;
-  font-family: 'Montserrat', sans-serif;
-}
-
-h2, h3, p {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1rem solid;
-  color: black;
-}
-
-.boton {
-  margin: 20px;
-  background-color: rgb(195, 154, 78);
-  border-radius: 1rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.controles {
-  display: inline-block;
-}
-
-button {
-  padding: 15px;
-  margin: 10px;
-  background-color: rgb(129, 101, 49);
-  color: black;
-}
-
-button:hover {
-  background-color: rgb(137, 130, 116);
-}
-
-span {
-  padding: 1rem;
-}
-
-/* Cards */
-
-.containerCards {
-  margin: 10px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.cards {
-  padding: 10px;
-}
-
-.cards p {
-  font-family: 'Nunito', sans-serif;
-}
-
-.cards a {
-  padding: 3px;
-  background-color: rgb(135, 120, 92);
+.listNavbar li a:hover {
   color: white;
-  border-radius: 1rem;
-}
-
-.cardIndividual {
-  background-color: white;
-  border-radius: 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 30px;
-}
-
-p {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1rem solid;
-}
-
-
-.containerCards  img{
-  width: 400px;
-  height: 500px;
-}
-
-.info {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 20px;
+  cursor: pointer;
+  text-decoration: underline 1rem;
 }
 
 /*Seccion carrito*/
 
-.counterCompra span {
+.counterCompra {
+  display: block;
+}
+
+.contador {
+  display: block;
+  color: saddlebrown;
   font-family: 'Nunito', sans-serif;
   position: absolute;
-  right: 106px;
+  right: 98px;
   top: 15px;
-  border-radius: 4rem;
-  font-size: large;
 }
 
 .contenedor {
@@ -179,4 +88,189 @@ p {
   align-items: center;
   padding: 10px;
   background-color: white;
+}
+
+/* Estilo del Main */
+
+main {
+  display: flex;
+  justify-content: center;
+}
+
+.titulos {
+  font-size: 1rem;
+}
+
+h2, h3, p {
+  padding: 20px;
+  font-size: 1rem solid;
+  color: black;
+}
+
+.boton {
+  margin: 20px;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.controles {
+  display: inline-block;
+}
+
+button {
+  padding: 15px;
+  margin: 10px;
+}
+
+button:hover {
+  background-color: #d4b19b;
+}
+
+span {
+  padding: 1rem;
+}
+
+
+/* Cards */
+
+.containerCards {
+  margin: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.cards {
+  padding: 10px;
+}
+
+.cards p {
+  font-family: 'Nunito', sans-serif;
+}
+
+.cardIndividual {
+  background-color: white;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+}
+
+p, span {
+  font-weight: bold;
+}
+
+.containerCards  img{
+  width: 400px;
+  height: 500px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+}
+
+.info p {
+  padding-top: 15px;
+}
+
+.productos {
+  display: flex;
+  padding: 50px;
+  flex-direction: column;
+  align-items: center;
+  background-color: #d4b19b;
+}
+
+.productos div {
+  display: flex;
+  padding: 20px;
+  align-items: center;
+}
+
+.containerImg {
+  width: 80rem;
+  height: 600px;
+}
+
+
+/*Footer*/
+
+footer {
+  background-color: #b79987;
+}
+
+.panelFooter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+.infoFooter{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 50px;
+  padding-right: 50px;
+  border-left: solid 1px rgb(135, 120, 92);
+}
+
+.listaFooter{
+  flex-direction: column;
+  list-style: none;
+}
+
+.listaFooter li a:hover {
+  color: white;
+}
+
+.copy {
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+}
+
+/*Form*/
+
+.contacto {
+  margin: 25px;
+  display: flex;
+  justify-content: center;
+}
+
+.redes{
+  padding: 15px 40px;
+  border-right: 1px solid rgb(135, 120, 92);
+}
+
+.redes ul {
+  padding: 15px;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+}
+
+form div {
+  padding: 15px 40px;
+}
+
+input {
+  padding: 20px;
+}
+
+select {
+  padding: 20px;
+}
+
+label {
+  padding: 10px;
 }

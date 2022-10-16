@@ -6,9 +6,9 @@ const CartWidget = () => {
 
     return (
         <>
-            <img src="https://img.icons8.com/fluency-systems-filled/70/ffffff/favorite-cart.png"/>
+            <img src="https://img.icons8.com/fluency-systems-filled/70/ffffff/favorite-cart.png" alt="Icono de Carrito"/>
             {
-                (totalQuantity() !=0) && <span className="contador"><strong>{totalQuantity()}</strong></span>
+                (totalQuantity() !==0) && <span className="contador"><strong>{totalQuantity()}</strong></span>
             }
             
         </>
